@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NDVI Analysis Result</title>
+  <style>
+      body {
+  font-family: Arial, sans-serif;
+  background-image: url('/static/bg/16x9_A_beautiful__healthy_field_of_cr.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; 
+  background-attachment: fixed;      
+  color: #2f3640;
+  text-align: center;
+  padding: 50px;
+}
+
+
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 10px;
+      padding: 30px;
+      display: inline-block;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    }
+    h2, h3 {
+      color: #f5f6fa;
+    }
+    img {
+      margin: 10px;
+      border-radius: 10px;
+      max-width: 90%;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      font-size: 18px;
+      margin: 8px 0;
+      color: #dcdde1;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #0097e6;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #00a8ff;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="content-box">
+    <h2>Results for Uploaded Image</h2>
+    <img src="{{ uploaded_image }}" style="width: 600px; height: auto;" ><br>
+
+    <h3>NDVI Heatmap</h3>
+    <img src="{{ ndvi_path }}" style="width: 600px; height: auto;"><br>
+
+    <h3>Segmentation Map</h3>
+    <img src="{{ seg_path }}" style="width: 600px; height: auto;"><br>
+
+    <h3>Overlayed Image</h3>
+    <img src="{{ overlay_path }}" style="width: 600px; height: auto;"><br>
+
+    <h3>Field Statistics</h3>
+    <ul>
+      {% for key, value in stats.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/">Upload another image</a>
+  </div>
+</body>
+</html>

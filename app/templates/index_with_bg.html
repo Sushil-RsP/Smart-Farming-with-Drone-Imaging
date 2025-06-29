@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NDVI Analyzer</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url('/static/bg/16x9_A_beautiful__healthy_field_of_cr.png'); /* Use forward slash and leading slash */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; 
+  background-attachment: fixed;      
+  color: #2f3640;
+  text-align: center;
+  padding: 50px;
+}
+
+    h2 {
+      color: #ffffff;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      display: inline-block;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 4);
+      margin-top: 20px;
+    }
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #44bd32;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    }
+    button:hover {
+      background-color: #4cd137;
+    }
+  </style>
+</head>
+<body>
+  <h2>NDVI Analyzer – Upload a Drone Image</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required><br>
+    <button type="submit">Analyze</button>
+  </form>
+</body>
+</html>
