@@ -1,7 +1,7 @@
 # Smart Farming with Drone Imaging 🌾📡
 
 This project is a smart farming solution that leverages drone-captured imagery and machine learning to analyze vegetation health using NDVI (Normalized Difference Vegetation Index) and image segmentation. It provides a simple web interface built with Flask for farmers, agronomists, and researchers.
-
+     
 ---   
 
 ## 🚀 Features
