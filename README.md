@@ -14,7 +14,7 @@ This project is a smart farming solution that leverages drone-captured imagery a
 - 🖼️ Clean, responsive UI with custom background and styles
 
 ---
-
+       
 ## 🛠️ Technologies Used
 
 - Python 3.12
