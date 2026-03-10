@@ -24,7 +24,7 @@ This project is a smart farming solution that leverages drone-captured imagery a
 - Matplotlib
 - HTML5 + CSS3
 
----
+---                 
 
 
 ## 📁 Folder Structure
